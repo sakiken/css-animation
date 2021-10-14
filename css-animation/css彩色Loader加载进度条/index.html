@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="porgress">
+        <span class="porgress_bar" style="width: 50%;"></span>
+    </div>
+
+    <script>
+        var porgressBar = document.querySelector('.porgress_bar')
+        var i = 0
+        var item = setInterval(() => {
+            i++
+            porgressBar.style.width = i + '%'
+            if (i == 100) {
+                clearInterval(item)
+            }
+        }, 20)
+    </script>
+</body>
+
+</html>
